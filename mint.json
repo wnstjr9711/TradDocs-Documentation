@@ -28,13 +28,13 @@
       "group": "API Reference",
       "pages": [
         "introduction",
-        "ratelimit"
+        "ratelimit",
+        "error"
       ]
     },
     {
       "group": "Endpoints",
       "pages": [
-        "endpoints/document/endpoint/create",
         "endpoints/document/endpoint/analyze"
       ]
     }

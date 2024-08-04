@@ -10,65 +10,30 @@
     }
   ],
   "paths": {
-    "/plants": {
+    "/documents/analyze": {
       "post": {
-        "description": "Creates a new plant in the store",
+        "description": "Analyze the document.",
         "requestBody": {
-          "description": "Plant to add to the store",
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/NewPlant"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "plant response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Plant"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/DocumentAnalyze"
+                  }
+                ],
+                "title": "Body"
               }
             }
           }
-        }
-      }
-    },
-    "/documents/analyze": {
-      "post": {
-        "description": "Creates a new plant in the store",
-        "requestBody": {
-          "description": "Plant to add to the store",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewPlant"
-              }
-            }
-          },
-          "required": true
         },
         "responses": {
           "200": {
-            "description": "plant response",
+            "description": "Successful Response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Plant"
+                  "$ref": "#/components/schemas/DocumentAnalyzeResponse"
                 }
               }
             }
@@ -89,54 +54,80 @@
   },
   "components": {
     "schemas": {
-      "Plant": {
-        "required": [
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "description": "The name of the plant",
-            "type": "string"
-          },
-          "tag": {
-            "description": "Tag to specify the type",
-            "type": "string"
-          }
-        }
-      },
-      "NewPlant": {
-        "allOf": [
+      "DocumentAnalyze": {
+        "oneOf": [
           {
-            "$ref": "#/components/schemas/Plant"
-          },
-          {
+            "title": "File",
             "required": [
-              "id"
+              "file"
             ],
-            "type": "object",
-            "properties": {
-              "id": {
-                "description": "Identification number of the plant",
-                "type": "integer",
-                "format": "int64"
-              }
+            "not": {
+              "required": [
+                "url"
+              ]
+            }
+          },
+          {
+            "title": "Url",
+            "required": [
+              "url"
+            ],
+            "not": {
+              "required": [
+                "file"
+              ]
             }
           }
-        ]
+        ],
+        "properties": {
+          "file": {
+            "type": "string",
+            "format": "binary",
+            "title": "File"
+          },
+          "url": {
+            "type": "string",
+            "minLength": 1,
+            "format": "uri",
+            "title": "Url"
+          }
+        },
+        "type": "object",
+        "title": "DocumentAnalyze"
+      },
+      "DocumentAnalyzeResponse": {
+        "items": {
+          "type": "object",
+          "properties": {
+            "split": {
+              "type": "object",
+              "properties": {
+                "document_type": {
+                  "type": "string"
+                },
+                "pages": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
+                }
+              }
+            },
+            "extracted": {
+              "type": "object"
+            }
+          }
+        },
+        "type": "array",
+        "title": "DocumentAnalyzeResponse"
       },
       "Error": {
         "required": [
-          "error",
-          "message"
+          "detail"
         ],
         "type": "object",
         "properties": {
-          "error": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "message": {
+          "detail": {
             "type": "string"
           }
         }

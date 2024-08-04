@@ -1,8 +1,9 @@
 ---
-title: 'Rate limits'
+title: 'Errors'
 description: 'To prevent misuse and control usage levels of our API, we have established limits on the amount an organization can access the TradDocs API.'
 ---
 
-|Requests per minute (RPM)|
-|---|
-|10|
+- `400` Invalid request parameters.
+- `401` Invalid authorization.
+- `413` Payload too large (Max 200MB).
+- `429` Rate limits exceeded.
