@@ -57,42 +57,22 @@
       "DocumentAnalyze": {
         "title": "DocumentAnalyze",
         "type": "object",
-        "oneOf": [
-          {
+        "description": "Represents a request for document analysis. The object can contain either a file or a URL pointing to the document to be analyzed. The properties are mutually exclusive, meaning you should provide either a file or a URL, but not both.",
+        "properties": {
+          "file": {
+            "type": "string",
+            "format": "binary",
             "title": "File",
-            "description": "Submit a document file directly for analysis. Provide the file as a binary string.",
-            "required": ["file"],
-            "not": {
-              "required": ["url"]
-            },
-            "properties": {
-              "file": {
-                "type": "string",
-                "format": "binary",
-                "title": "File",
-                "description": "The document file to be analyzed, provided as a binary string."
-              }
-            }
+            "description": "A binary file representing the document to be analyzed. This should be provided as a file upload, for example using a multipart/form-data request. The file can be in various formats such as .pdf, .docx, .eml, etc. Example usage: -F 'files=@path/to/your-document.extension'."
           },
-          {
+          "url": {
+            "type": "string",
+            "minLength": 1,
+            "format": "uri",
             "title": "Url",
-            "description": "Submit a URL pointing to the document to be analyzed. Provide the URL as a valid URI string.",
-            "required": ["url"],
-            "not": {
-              "required": ["file"]
-            },
-            "properties": {
-              "url": {
-                "type": "string",
-                "minLength": 1,
-                "format": "uri",
-                "title": "Url",
-                "description": "The URL of the document to be analyzed."
-              }
-            }
+            "description": "A URI pointing to the document to be analyzed. This should be used if the document is hosted at a specific URL and can be accessed directly from the web."
           }
-        ],
-        "description": "Submit either a document file or a URL to the document for analysis. The endpoint will handle the document based on the provided input, either directly from the file or by fetching it from the provided URL."
+        }
       },
       "DocumentAnalyzeResponse": {
         "title": "DocumentAnalyzeResponse",
