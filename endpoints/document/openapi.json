@@ -12,7 +12,7 @@
   "paths": {
     "/v1/documents/analyze": {
       "post": {
-        "description": "Analyze the document.",
+        "description": "Submit a document to this endpoint, which will categorize it into the correct document type. It then returns the document split into its respective type and provides the extracted key-value pairs of essential information for each categorized document.",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -55,47 +55,48 @@
   "components": {
     "schemas": {
       "DocumentAnalyze": {
+        "title": "DocumentAnalyze",
+        "type": "object",
         "oneOf": [
           {
             "title": "File",
-            "required": [
-              "file"
-            ],
+            "description": "Submit a document file directly for analysis. Provide the file as a binary string.",
+            "required": ["file"],
             "not": {
-              "required": [
-                "url"
-              ]
+              "required": ["url"]
+            },
+            "properties": {
+              "file": {
+                "type": "string",
+                "format": "binary",
+                "title": "File",
+                "description": "The document file to be analyzed, provided as a binary string."
+              }
             }
           },
           {
             "title": "Url",
-            "required": [
-              "url"
-            ],
+            "description": "Submit a URL pointing to the document to be analyzed. Provide the URL as a valid URI string.",
+            "required": ["url"],
             "not": {
-              "required": [
-                "file"
-              ]
+              "required": ["file"]
+            },
+            "properties": {
+              "url": {
+                "type": "string",
+                "minLength": 1,
+                "format": "uri",
+                "title": "Url",
+                "description": "The URL of the document to be analyzed."
+              }
             }
           }
         ],
-        "properties": {
-          "file": {
-            "type": "string",
-            "format": "binary",
-            "title": "File"
-          },
-          "url": {
-            "type": "string",
-            "minLength": 1,
-            "format": "uri",
-            "title": "Url"
-          }
-        },
-        "type": "object",
-        "title": "DocumentAnalyze"
+        "description": "Submit either a document file or a URL to the document for analysis. The endpoint will handle the document based on the provided input, either directly from the file or by fetching it from the provided URL."
       },
       "DocumentAnalyzeResponse": {
+        "title": "DocumentAnalyzeResponse",
+        "type": "array",
         "items": {
           "type": "object",
           "properties": {
@@ -103,28 +104,30 @@
               "type": "object",
               "properties": {
                 "document_type": {
-                  "type": "string"
+                  "type": "string",
+                  "description": "The type of document determined by the categorization process."
                 },
                 "pages": {
                   "type": "array",
                   "items": {
                     "type": "integer"
-                  }
+                  },
+                  "description": "The pages that have been identified for this document type."
                 }
-              }
+              },
+              "description": "Details of how the document has been split into its respective type and the associated pages."
             },
             "extracted": {
-              "type": "object"
+              "type": "object",
+              "description": "The key-value pairs of essential information extracted from the document."
             }
-          }
+          },
+          "description": "An array of objects representing the split documents and their extracted information."
         },
-        "type": "array",
-        "title": "DocumentAnalyzeResponse"
+        "description": "The JSON response format for each document type can be referenced [here](../../../endpoints/document/types/bill-of-lading). By using this endpoint, you can efficiently manage and process multiple documents, obtaining structured and relevant information from them."
       },
       "Error": {
-        "required": [
-          "detail"
-        ],
+        "required": ["detail"],
         "type": "object",
         "properties": {
           "detail": {

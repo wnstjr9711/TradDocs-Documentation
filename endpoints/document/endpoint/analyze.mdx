@@ -1,9 +1,20 @@
 ---
-title: 'Analyze Document'
-openapi: 'POST /v1/documents/analyze'
+title: "Analyze Document"
+openapi: "POST /v1/documents/analyze"
 ---
 
+## Analyze Document Endpoint
+
+The `Analyze Document` endpoint processes and analyzes multiple documents to extract important information. Here's a detailed breakdown of its functionality:
+
+1. **Document Splitting**:
+   The endpoint splits the provided documents into the appropriate types using a document splitter.
+
+2. **Information Extraction**:
+   The endpoint extracts key-value pairs of important information from each split document.
+
 ### Supported document types
+
 - [Bill of Lading](../types/bill-of-lading)
 - [Letter of Credit](../types/letter-of-credit)
 - [Document Instruction](../types/document-instruction)
