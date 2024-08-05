@@ -1,81 +1,189 @@
 ---
-title: 'Commercial Invoice'
+title: "Commercial Invoice"
 ---
 
 ## Schema
-```json
-{
-  "document": {
-    "dateOfIssue": null,
-    "placeOfIssue": null
-  },
-  "invoiceNumber": null,
-  "contractNumber": null,
-  "from": {
-    "fullInformation": null,
-    "name": null,
-    "address": null,
-    "contactDetails": {
-      "phone": null,
-      "email": null
-    }
-  },
-  "to": {
-    "fullInformation": null,
-    "name": null,
-    "address": null,
-    "contactDetails": {
-      "phone": null,
-      "email": null
-    }
-  },
-  "billOfLading": {
-    "number": null,
-    "date": null
-  },
-  "lcNumber": null,
-  "invoiceValue": null,
-  "incoterm": null,
-  "descriptionOfGoods": [
-    {
-      "fullInformation": null,
-      "commodity": {
-        "name": null,
-        "origin": null,
-        "cropYear": null,
-        "hsCode": null
-      },
-      "bags": null,
-      "grossWeight": null,
-      "netWeight": null,
-      "packing": null
-    }
-  ],
-  "dateOfShipment": null,
-  "lotNumbers": [],
-  "shippingMarks": [
-    {
-      "fullInformation": null,
-      "bags": null,
-      "grossWeight": null,
-      "netWeight": null
-    }
-  ],
-  "bankInformation": {
-    "bankName": null,
-    "accountNumber": null,
-    "branchCode": null,
-    "swiftCode": null
-  },
-  "dueDate": null,
-  "vesselDetails": {
-    "vesselName": null,
-    "voyageNumber": null,
-    "flag": null
-  },
-  "paymentMethod": null,
-  "shipmentFrom": null,
-  "shipmentTo": null,
-  "packing": null
-}
-```
+
+<ParamField path="document.dateOfIssue" type="string">
+  Date of issue of the document
+</ParamField>
+
+<ParamField path="document.placeOfIssue" type="string">
+  Place of issue of the document
+</ParamField>
+
+<ParamField path="invoiceNumber" type="string">
+  Invoice number
+</ParamField>
+
+<ParamField path="contractNumber" type="string">
+  Contract number
+</ParamField>
+
+<ParamField path="from.fullInformation" type="string">
+  Complete details of the sender
+</ParamField>
+
+<ParamField path="from.name" type="string">
+  Name of the sender
+</ParamField>
+
+<ParamField path="from.address" type="string">
+  Address of the sender
+</ParamField>
+
+<ParamField path="from.contactDetails.phone" type="string">
+  Phone number of the sender
+</ParamField>
+
+<ParamField path="from.contactDetails.email" type="string">
+  Email address of the sender
+</ParamField>
+
+<ParamField path="to.fullInformation" type="string">
+  Complete details of the recipient
+</ParamField>
+
+<ParamField path="to.name" type="string">
+  Name of the recipient
+</ParamField>
+
+<ParamField path="to.address" type="string">
+  Address of the recipient
+</ParamField>
+
+<ParamField path="to.contactDetails.phone" type="string">
+  Phone number of the recipient
+</ParamField>
+
+<ParamField path="to.contactDetails.email" type="string">
+  Email address of the recipient
+</ParamField>
+
+<ParamField path="billOfLading.number" type="string">
+  Bill of Lading number
+</ParamField>
+
+<ParamField path="billOfLading.date" type="string">
+  Bill of Lading date
+</ParamField>
+
+<ParamField path="lcNumber" type="string">
+  Letter of Credit number
+</ParamField>
+
+<ParamField path="invoiceValue" type="number">
+  Invoice value
+</ParamField>
+
+<ParamField path="incoterm" type="string">
+  Incoterm details
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].fullInformation" type="string">
+  Complete details of the goods
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].commodity.name" type="string">
+  Name of the commodity
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].commodity.origin" type="string">
+  Origin of the commodity
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].commodity.cropYear" type="string">
+  Crop year of the commodity
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].commodity.hsCode" type="string">
+  HS code of the commodity
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].bags" type="number">
+  Number of bags
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].grossWeight" type="number">
+  Gross weight of the goods
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].netWeight" type="number">
+  Net weight of the goods
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].packing" type="string">
+  Packing details
+</ParamField>
+
+<ParamField path="dateOfShipment" type="string">
+  Date of shipment
+</ParamField>
+
+<ParamField path="lotNumbers" type="array">
+  Lot numbers
+</ParamField>
+
+<ParamField path="shippingMarks[].fullInformation" type="string">
+  Complete details of the shipping marks
+</ParamField>
+
+<ParamField path="shippingMarks[].bags" type="number">
+  Number of bags marked
+</ParamField>
+
+<ParamField path="shippingMarks[].grossWeight" type="number">
+  Gross weight of the marked goods
+</ParamField>
+
+<ParamField path="shippingMarks[].netWeight" type="number">
+  Net weight of the marked goods
+</ParamField>
+
+<ParamField path="bankInformation.bankName" type="string">
+  Bank name
+</ParamField>
+
+<ParamField path="bankInformation.accountNumber" type="string">
+  Bank account number
+</ParamField>
+
+<ParamField path="bankInformation.branchCode" type="string">
+  Bank branch code
+</ParamField>
+
+<ParamField path="bankInformation.swiftCode" type="string">
+  Bank SWIFT code
+</ParamField>
+
+<ParamField path="dueDate" type="string">
+  Due date for payment
+</ParamField>
+
+<ParamField path="vesselDetails.vesselName" type="string">
+  Name of the vessel
+</ParamField>
+
+<ParamField path="vesselDetails.voyageNumber" type="string">
+  Voyage number
+</ParamField>
+
+<ParamField path="vesselDetails.flag" type="string">
+  Flag of the vessel
+</ParamField>
+
+<ParamField path="paymentMethod" type="string">
+  Method of payment
+</ParamField>
+
+<ParamField path="shipmentFrom" type="string">
+  Location from which the shipment is sent
+</ParamField>
+
+<ParamField path="shipmentTo" type="string">
+  Destination of the shipment
+</ParamField>
+
+<ParamField path="packing" type="string">
+  Packing details
+</ParamField>

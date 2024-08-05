@@ -1,6 +1,8 @@
 ---
-title: 'Certificate of Origin'
+title: "Certificate of Origin"
 ---
+
+The Certificate of Quality can be categorized into two types with **two different schemas** (General / ICO):
 
 - `Certificate of Origin General`
   - `Certificate of Origin Free Trade`
@@ -8,198 +10,438 @@ title: 'Certificate of Origin'
   - `Certificate of Origin GSP` (Generalized System of Preferences)
 - `Certificate of Origin ICO` (International Coffee Organization)
 
-## Schema
-<CodeGroup>
-```json General
-{
-  "document": {
-    "dateOfIssue": null,
-    "placeOfIssue": null
-  },
-  "shipper": {
-    "fullInformation": null,
-    "name": null,
-    "address": null,
-    "contactDetails": {
-      "phone": null,
-      "email": null
-    }
-  },
-  "consignee": {
-    "fullInformation": null,
-    "name": null,
-    "address": null,
-    "contactDetails": {
-      "phone": null,
-      "email": null
-    }
-  },
-  "notifyParties": [
-    {
-      "fullInformation": null,
-      "name": null,
-      "address": null,
-      "contactDetails": {
-        "phone": null,
-        "email": null
-      }
-    }
-  ],
-  "meansOfTransport": null,
-  "vesselDetails": {
-    "vesselName": null,
-    "voyageNumber": null,
-    "flag": null
-  },
-  "portOfLoading": null,
-  "portOfDischarging": null,
-  "containers": [
-    {
-      "containerNumber": null,
-      "sealNumbers": [],
-      "netWeight": null
-    }
-  ],
-  "lotNumbers": [],
-  "dateOfShipment": null,
-  "lcNumber": null,
-  "billOfLading": {
-    "number": null,
-    "date": null
-  },
-  "shippingMarks": [
-    {
-      "fullInformation": null,
-      "bags": null,
-      "grossWeight": null,
-      "netWeight": null
-    }
-  ],
-  "descriptionOfGoods": [
-    {
-      "fullInformation": null,
-      "commodity": {
-        "name": null,
-        "origin": null,
-        "cropYear": null,
-        "hsCode": null
-      },
-      "bags": null,
-      "netWeight": {
-        "weight": null,
-        "unit": null
-      },
-      "packing": null
-    }
-  ],
-  "invoice": {
-    "number": null,
-    "date": null
-  },
-  "goodsExportedTo": null
-}
-```
-```json ICO
-{
-  "document": {
-    "dateOfIssue": null,
-    "placeOfIssue": null
-  },
-  "shipper": {
-    "fullInformation": null,
-    "name": null,
-    "address": null,
-    "contactDetails": {
-      "phone": null,
-      "email": null
-    }
-  },
-  "consignee": {
-    "fullInformation": null,
-    "name": null,
-    "address": null,
-    "contactDetails": {
-      "phone": null,
-      "email": null
-    }
-  },
-  "containers": [
-    {
-      "containerNumber": null,
-      "sealNumbers": [],
-      "netWeight": null
-    }
-  ],
-  "lotNumbers": [],
-  "notifyParties": [
-    {
-      "fullInformation": null,
-      "name": null,
-      "address": null,
-      "contactDetails": {
-        "phone": null,
-        "email": null
-      }
-    }
-  ],
-  "billOfLading": {
-    "number": null,
-    "date": null
-  },
-  "lcNumber": null,
-  "countryOfDestination": null,
-  "destinationCountryCode": null,
-  "meansOfTransport": null,
-  "shippedIn": null,
-  "descriptionOfGoods": [
-    {
-      "fullInformation": null,
-      "commodity": {
-        "name": null,
-        "origin": null,
-        "cropYear": null,
-        "hsCode": null
-      },
-      "bags": null,
-      "netWeight": {
-        "weight": null,
-        "unit": null
-      },
-      "packing": null
-    }
-  ],
-  "internalReferenceNo": null,
-  "countryCode": null,
-  "placeOfLoading": null,
-  "portOfShipmentCode": null,
-  "serialNo": null,
-  "producingCountry": {
-    "name": null,
-    "code": null
-  },
-  "dateOfExport": null,
-  "vesselDetails": {
-    "vesselName": null,
-    "voyageNumber": null,
-    "flag": null
-  },
-  "methodOfProcessing": null,
-  "qualityStandardsForGreenCoffee": null,
-  "specialCharacteristics": null,
-  "valueOfShipmentFOB": null,
-  "additionalInformation": null,
-  "countriesAndIntermediatePorts": null,
-  "botanicalName": null,
-  "exportingForm": null,
-  "shippingMarks": [
-    {
-      "fullInformation": null,
-      "bags": null,
-      "grossWeight": null,
-      "netWeight": null
-    }
-  ],
-  "otherMarks": null
-}
-```
-</CodeGroup>
+## General Schema
+
+<ParamField path="document.dateOfIssue" type="string">
+  The date when the document was issued.
+</ParamField>
+
+<ParamField path="document.placeOfIssue" type="string">
+  The place where the document was issued.
+</ParamField>
+
+<ParamField path="shipper.fullInformation" type="string">
+  The full information of the shipper.
+</ParamField>
+
+<ParamField path="shipper.name" type="string">
+  The name of the shipper.
+</ParamField>
+
+<ParamField path="shipper.address" type="string">
+  The address of the shipper.
+</ParamField>
+
+<ParamField path="shipper.contactDetails.phone" type="string">
+  The phone number of the shipper.
+</ParamField>
+
+<ParamField path="shipper.contactDetails.email" type="string">
+  The email address of the shipper.
+</ParamField>
+
+<ParamField path="consignee.fullInformation" type="string">
+  The full information of the consignee.
+</ParamField>
+
+<ParamField path="consignee.name" type="string">
+  The name of the consignee.
+</ParamField>
+
+<ParamField path="consignee.address" type="string">
+  The address of the consignee.
+</ParamField>
+
+<ParamField path="consignee.contactDetails.phone" type="string">
+  The phone number of the consignee.
+</ParamField>
+
+<ParamField path="consignee.contactDetails.email" type="string">
+  The email address of the consignee.
+</ParamField>
+
+<ParamField path="notifyParties[0].fullInformation" type="string">
+  The full information of the notify party.
+</ParamField>
+
+<ParamField path="notifyParties[0].name" type="string">
+  The name of the notify party.
+</ParamField>
+
+<ParamField path="notifyParties[0].address" type="string">
+  The address of the notify party.
+</ParamField>
+
+<ParamField path="notifyParties[0].contactDetails.phone" type="string">
+  The phone number of the notify party.
+</ParamField>
+
+<ParamField path="notifyParties[0].contactDetails.email" type="string">
+  The email address of the notify party.
+</ParamField>
+
+<ParamField path="meansOfTransport" type="string">
+  The means of transport used.
+</ParamField>
+
+<ParamField path="vesselDetails.vesselName" type="string">
+  The name of the vessel.
+</ParamField>
+
+<ParamField path="vesselDetails.voyageNumber" type="string">
+  The voyage number of the vessel.
+</ParamField>
+
+<ParamField path="vesselDetails.flag" type="string">
+  The flag under which the vessel is registered.
+</ParamField>
+
+<ParamField path="portOfLoading" type="string">
+  The port where the shipment is loaded.
+</ParamField>
+
+<ParamField path="portOfDischarging" type="string">
+  The port where the shipment is discharged.
+</ParamField>
+
+<ParamField path="containers[0].containerNumber" type="string">
+  The number of the container.
+</ParamField>
+
+<ParamField path="containers[0].sealNumbers" type="array">
+  The seal numbers of the container.
+</ParamField>
+
+<ParamField path="containers[0].netWeight" type="string">
+  The net weight of the container.
+</ParamField>
+
+<ParamField path="lotNumbers" type="array">
+  The lot numbers associated with the shipment.
+</ParamField>
+
+<ParamField path="dateOfShipment" type="string">
+  The date when the shipment took place.
+</ParamField>
+
+<ParamField path="lcNumber" type="string">
+  The letter of credit number.
+</ParamField>
+
+<ParamField path="billOfLading.number" type="string">
+  The number of the bill of lading.
+</ParamField>
+
+<ParamField path="billOfLading.date" type="string">
+  The date of the bill of lading.
+</ParamField>
+
+<ParamField path="shippingMarks[0].fullInformation" type="string">
+  The full information of the shipping marks.
+</ParamField>
+
+<ParamField path="shippingMarks[0].bags" type="string">
+  The number of bags as per the shipping marks.
+</ParamField>
+
+<ParamField path="shippingMarks[0].grossWeight" type="string">
+  The gross weight as per the shipping marks.
+</ParamField>
+
+<ParamField path="shippingMarks[0].netWeight" type="string">
+  The net weight as per the shipping marks.
+</ParamField>
+
+<ParamField path="descriptionOfGoods[0].fullInformation" type="string">
+  The full description of the goods.
+</ParamField>
+
+<ParamField path="descriptionOfGoods[0].commodity.name" type="string">
+  The name of the commodity.
+</ParamField>
+
+<ParamField path="descriptionOfGoods[0].commodity.origin" type="string">
+  The origin of the commodity.
+</ParamField>
+
+<ParamField path="descriptionOfGoods[0].commodity.cropYear" type="string">
+  The crop year of the commodity.
+</ParamField>
+
+<ParamField path="descriptionOfGoods[0].commodity.hsCode" type="string">
+  The HS code of the commodity.
+</ParamField>
+
+<ParamField path="descriptionOfGoods[0].bags" type="string">
+  The number of bags containing the goods.
+</ParamField>
+
+<ParamField path="descriptionOfGoods[0].netWeight.weight" type="string">
+  The weight of the goods.
+</ParamField>
+
+<ParamField path="descriptionOfGoods[0].netWeight.unit" type="string">
+  The unit of measurement for the weight of the goods.
+</ParamField>
+
+<ParamField path="descriptionOfGoods[0].packing" type="string">
+  The type of packing for the goods.
+</ParamField>
+
+<ParamField path="invoice.number" type="string">
+  The number of the invoice.
+</ParamField>
+
+<ParamField path="invoice.date" type="string">
+  The date of the invoice.
+</ParamField>
+
+<ParamField path="goodsExportedTo" type="string">
+  The destination to which the goods are exported.
+</ParamField>
+
+## ICO Schema
+
+<ParamField path="document.dateOfIssue" type="string">
+  The date when the document was issued.
+</ParamField>
+
+<ParamField path="document.placeOfIssue" type="string">
+  The place where the document was issued.
+</ParamField>
+
+<ParamField path="shipper.fullInformation" type="string">
+  The full information of the shipper.
+</ParamField>
+
+<ParamField path="shipper.name" type="string">
+  The name of the shipper.
+</ParamField>
+
+<ParamField path="shipper.address" type="string">
+  The address of the shipper.
+</ParamField>
+
+<ParamField path="shipper.contactDetails.phone" type="string">
+  The phone number of the shipper.
+</ParamField>
+
+<ParamField path="shipper.contactDetails.email" type="string">
+  The email address of the shipper.
+</ParamField>
+
+<ParamField path="consignee.fullInformation" type="string">
+  The full information of the consignee.
+</ParamField>
+
+<ParamField path="consignee.name" type="string">
+  The name of the consignee.
+</ParamField>
+
+<ParamField path="consignee.address" type="string">
+  The address of the consignee.
+</ParamField>
+
+<ParamField path="consignee.contactDetails.phone" type="string">
+  The phone number of the consignee.
+</ParamField>
+
+<ParamField path="consignee.contactDetails.email" type="string">
+  The email address of the consignee.
+</ParamField>
+
+<ParamField path="containers[0].containerNumber" type="string">
+  The number of the container.
+</ParamField>
+
+<ParamField path="containers[0].sealNumbers" type="array">
+  The seal numbers of the container.
+</ParamField>
+
+<ParamField path="containers[0].netWeight" type="string">
+  The net weight of the container.
+</ParamField>
+
+<ParamField path="lotNumbers" type="array">
+  The lot numbers associated with the shipment.
+</ParamField>
+
+<ParamField path="notifyParties[0].fullInformation" type="string">
+  The full information of the notify party.
+</ParamField>
+
+<ParamField path="notifyParties[0].name" type="string">
+  The name of the notify party.
+</ParamField>
+
+<ParamField path="notifyParties[0].address" type="string">
+  The address of the notify party.
+</ParamField>
+
+<ParamField path="notifyParties[0].contactDetails.phone" type="string">
+  The phone number of the notify party.
+</ParamField>
+
+<ParamField path="notifyParties[0].contactDetails.email" type="string">
+  The email address of the notify party.
+</ParamField>
+
+<ParamField path="billOfLading.number" type="string">
+  The number of the bill of lading.
+</ParamField>
+
+<ParamField path="billOfLading.date" type="string">
+  The date of the bill of lading.
+</ParamField>
+
+<ParamField path="lcNumber" type="string">
+  The letter of credit number.
+</ParamField>
+
+<ParamField path="countryOfDestination" type="string">
+  The country to which the goods are destined.
+</ParamField>
+
+<ParamField path="destinationCountryCode" type="string">
+  The country code for the destination.
+</ParamField>
+
+<ParamField path="meansOfTransport" type="string">
+  The means of transport used.
+</ParamField>
+
+<ParamField path="shippedIn" type="string">
+  The details of the shipping method or conditions.
+</ParamField>
+
+<ParamField path="descriptionOfGoods[0].fullInformation" type="string">
+  The full description of the goods.
+</ParamField>
+
+<ParamField path="descriptionOfGoods[0].commodity.name" type="string">
+  The name of the commodity.
+</ParamField>
+
+<ParamField path="descriptionOfGoods[0].commodity.origin" type="string">
+  The origin of the commodity.
+</ParamField>
+
+<ParamField path="descriptionOfGoods[0].commodity.cropYear" type="string">
+  The crop year of the commodity.
+</ParamField>
+
+<ParamField path="descriptionOfGoods[0].commodity.hsCode" type="string">
+  The HS code of the commodity.
+</ParamField>
+
+<ParamField path="descriptionOfGoods[0].bags" type="string">
+  The number of bags containing the goods.
+</ParamField>
+
+<ParamField path="descriptionOfGoods[0].netWeight.weight" type="string">
+  The weight of the goods.
+</ParamField>
+
+<ParamField path="descriptionOfGoods[0].netWeight.unit" type="string">
+  The unit of measurement for the weight of the goods.
+</ParamField>
+
+<ParamField path="descriptionOfGoods[0].packing" type="string">
+  The type of packing for the goods.
+</ParamField>
+
+<ParamField path="internalReferenceNo" type="string">
+  The internal reference number for the shipment.
+</ParamField>
+
+<ParamField path="countryCode" type="string">
+  The code of the country of origin.
+</ParamField>
+
+<ParamField path="placeOfLoading" type="string">
+  The place where the shipment was loaded.
+</ParamField>
+
+<ParamField path="portOfShipmentCode" type="string">
+  The code of the port where the shipment was made.
+</ParamField>
+
+<ParamField path="serialNo" type="string">
+  The serial number associated with the shipment.
+</ParamField>
+
+<ParamField path="producingCountry.name" type="string">
+  The name of the producing country.
+</ParamField>
+
+<ParamField path="producingCountry.code" type="string">
+  The code of the producing country.
+</ParamField>
+
+<ParamField path="dateOfExport" type="string">
+  The date when the export took place.
+</ParamField>
+
+<ParamField path="vesselDetails.vesselName" type="string">
+  The name of the vessel.
+</ParamField>
+
+<ParamField path="vesselDetails.voyageNumber" type="string">
+  The voyage number of the vessel.
+</ParamField>
+
+<ParamField path="vesselDetails.flag" type="string">
+  The flag under which the vessel is registered.
+</ParamField>
+
+<ParamField path="methodOfProcessing" type="string">
+  The method used for processing the goods.
+</ParamField>
+
+<ParamField path="qualityStandardsForGreenCoffee" type="string">
+  The quality standards for green coffee.
+</ParamField>
+
+<ParamField path="specialCharacteristics" type="string">
+  Any special characteristics of the goods.
+</ParamField>
+
+<ParamField path="valueOfShipmentFOB" type="string">
+  The value of the shipment at Free on Board (FOB) terms.
+</ParamField>
+
+<ParamField path="additionalInformation" type="string">
+  Any additional information relevant to the shipment.
+</ParamField>
+
+<ParamField path="countriesAndIntermediatePorts" type="string">
+  The countries and intermediate ports involved in the shipment.
+</ParamField>
+
+<ParamField path="botanicalName" type="string">
+  The botanical name of the commodity, if applicable.
+</ParamField>
+
+<ParamField path="exportingForm" type="string">
+  The form in which the goods are being exported.
+</ParamField>
+
+<ParamField path="shippingMarks[0].fullInformation" type="string">
+  The full information of the shipping marks.
+</ParamField>
+
+<ParamField path="shippingMarks[0].bags" type="string">
+  The number of bags as per the shipping marks.
+</ParamField>
+
+<ParamField path="shippingMarks[0].grossWeight" type="string">
+  The gross weight as per the shipping marks.
+</ParamField>
+
+<ParamField path="shippingMarks[0].netWeight" type="string">
+  The net weight as per the shipping marks.
+</ParamField>
+
+<ParamField path="otherMarks" type="string">
+  Any other marks associated with the shipment.
+</ParamField>

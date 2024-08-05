@@ -1,106 +1,225 @@
 ---
-title: 'Contract'
+title: "Contract"
 ---
 
 ## Schema
-```json
-{
-  "contractNumber": null,
-  "buyer": {
-    "fullInformation": "",
-    "name": null,
-    "address": null
-  },
-  "seller": {
-    "fullInformation": "",
-    "name": null,
-    "address": null
-  },
-  "extensionOfShipment": {
-    "fullInformation": null
-  },
-  "dateOfContract": null,
-  "packing": null,
-  "loadingRate": {
-    "rate": null,
-    "unit": null
-  },
-  "dischargeRate": {
-    "rate": null,
-    "unit": null
-  },
-  "payment": {
-    "fullInformation": null,
-    "term": null,
-    "lcType": null,
-    "percentage": "100",
-    "timeFrame": null
-  },
-  "portOfLoading": {
-    "port": null,
-    "safePort": null,
-    "safeBerth": null,
-    "dateOfShipment": {
-      "from": null,
-      "until": null,
-      "transshipment": null,
-      "partialShipment": null
-    }
-  },
-  "destination": {
-    "country": null,
-    "portOfDischarge": {
-      "port": null,
-      "safePort": null,
-      "safeBerth": null
-    }
-  },
-  "freeDate": {
-    "days": null
-  },
-  "weightQualityCondition": {
-    "finalPort": null
-  },
-  "arbitration": {
-    "country": null,
-    "rule": null
-  },
-  "insuranceOption": null,
-  "surveyorCostOption": null,
-  "surveyorNominationOption": null,
-  "descriptionOfGoods": [
-    {
-      "commodity": {
-        "name": null,
-        "origin": null,
-        "cropYear": null,
-        "hsCode": null
-      },
-      "quantity": {
-        "value": null,
-        "unit": null,
-        "tolerance": {
-          "plus": null,
-          "minus": null,
-          "unit": null,
-          "option": null
-        }
-      },
-      "quality": {},
-      "price": {
-        "fullInformation": null,
-        "value": null,
-        "unit": null
-      },
-      "incoterm": null
-    }
-  ],
-  "requiredDocuments": [
-    {
-      "fullInformation": null,
-      "originals": 0,
-      "copies": 0
-    }
-  ]
-}
-```
+
+<ParamField path="contractNumber" type="string">
+  Contract number
+</ParamField>
+
+<ParamField path="buyer.fullInformation" type="string">
+  Complete details of the buyer
+</ParamField>
+
+<ParamField path="buyer.name" type="string">
+  Name of the buyer
+</ParamField>
+
+<ParamField path="buyer.address" type="string">
+  Address of the buyer
+</ParamField>
+
+<ParamField path="seller.fullInformation" type="string">
+  Complete details of the seller
+</ParamField>
+
+<ParamField path="seller.name" type="string">
+  Name of the seller
+</ParamField>
+
+<ParamField path="seller.address" type="string">
+  Address of the seller
+</ParamField>
+
+<ParamField path="extensionOfShipment.fullInformation" type="string">
+  Details of shipment extension
+</ParamField>
+
+<ParamField path="dateOfContract" type="string">
+  Date of the contract
+</ParamField>
+
+<ParamField path="packing" type="string">
+  Packing details
+</ParamField>
+
+<ParamField path="loadingRate.rate" type="number">
+  Loading rate
+</ParamField>
+
+<ParamField path="loadingRate.unit" type="string">
+  Unit of loading rate
+</ParamField>
+
+<ParamField path="dischargeRate.rate" type="number">
+  Discharge rate
+</ParamField>
+
+<ParamField path="dischargeRate.unit" type="string">
+  Unit of discharge rate
+</ParamField>
+
+<ParamField path="payment.fullInformation" type="string">
+  Complete payment details
+</ParamField>
+
+<ParamField path="payment.term" type="string">
+  Payment term
+</ParamField>
+
+<ParamField path="payment.lcType" type="string">
+  Letter of Credit type
+</ParamField>
+
+<ParamField path="payment.percentage" type="string">
+  Payment percentage
+</ParamField>
+
+<ParamField path="payment.timeFrame" type="string">
+  Time frame for payment
+</ParamField>
+
+<ParamField path="portOfLoading.port" type="string">
+  Port of loading
+</ParamField>
+
+<ParamField path="portOfLoading.safePort" type="string">
+  Safe port for loading
+</ParamField>
+
+<ParamField path="portOfLoading.safeBerth" type="string">
+  Safe berth for loading
+</ParamField>
+
+<ParamField path="portOfLoading.dateOfShipment.from" type="string">
+  Shipment start date
+</ParamField>
+
+<ParamField path="portOfLoading.dateOfShipment.until" type="string">
+  Shipment end date
+</ParamField>
+
+<ParamField path="portOfLoading.dateOfShipment.transshipment" type="string">
+  Transshipment details
+</ParamField>
+
+<ParamField path="portOfLoading.dateOfShipment.partialShipment" type="string">
+  Partial shipment details
+</ParamField>
+
+<ParamField path="destination.country" type="string">
+  Destination country
+</ParamField>
+
+<ParamField path="destination.portOfDischarge.port" type="string">
+  Port of discharge
+</ParamField>
+
+<ParamField path="destination.portOfDischarge.safePort" type="string">
+  Safe port for discharge
+</ParamField>
+
+<ParamField path="destination.portOfDischarge.safeBerth" type="string">
+  Safe berth for discharge
+</ParamField>
+
+<ParamField path="freeDate.days" type="number">
+  Free days allowed
+</ParamField>
+
+<ParamField path="weightQualityCondition.finalPort" type="string">
+  Final port for weight and quality condition
+</ParamField>
+
+<ParamField path="arbitration.country" type="string">
+  Country for arbitration
+</ParamField>
+
+<ParamField path="arbitration.rule" type="string">
+  Arbitration rule
+</ParamField>
+
+<ParamField path="insuranceOption" type="string">
+  Insurance option
+</ParamField>
+
+<ParamField path="surveyorCostOption" type="string">
+  Surveyor cost option
+</ParamField>
+
+<ParamField path="surveyorNominationOption" type="string">
+  Surveyor nomination option
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].commodity.name" type="string">
+  Name of the commodity
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].commodity.origin" type="string">
+  Origin of the commodity
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].commodity.cropYear" type="string">
+  Crop year of the commodity
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].commodity.hsCode" type="string">
+  HS code of the commodity
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].quantity.value" type="number">
+  Quantity value
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].quantity.unit" type="string">
+  Quantity unit
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].quantity.tolerance.plus" type="number">
+  Tolerance plus
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].quantity.tolerance.minus" type="number">
+  Tolerance minus
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].quantity.tolerance.unit" type="string">
+  Tolerance unit
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].quantity.tolerance.option" type="string">
+  Tolerance option
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].quality" type="object">
+  Quality details
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].price.fullInformation" type="string">
+  Complete price details
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].price.value" type="number">
+  Price value
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].price.unit" type="string">
+  Price unit
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].incoterm" type="string">
+  Incoterm details
+</ParamField>
+
+<ParamField path="requiredDocuments[].fullInformation" type="string">
+  Complete details of the required documents
+</ParamField>
+
+<ParamField path="requiredDocuments[].originals" type="number">
+  Number of originals
+</ParamField>
+
+<ParamField path="requiredDocuments[].copies" type="number">
+  Number of copies
+</ParamField>

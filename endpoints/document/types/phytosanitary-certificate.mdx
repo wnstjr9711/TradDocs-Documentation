@@ -1,84 +1,177 @@
 ---
-title: 'Phytosanitary Certificate'
+title: "Phytosanitary Certificate"
 ---
 
 ## Schema
-```json
-{
-  "document": {
-    "dateOfIssue": null,
-    "placeOfIssue": null
-  },
-  "shipper": {
-    "fullInformation": null,
-    "name": null,
-    "address": null,
-    "contactDetails": {
-      "phone": null,
-      "email": null
-    }
-  },
-  "consignee": {
-    "fullInformation": null,
-    "name": null,
-    "address": null,
-    "contactDetails": {
-      "phone": null,
-      "email": null
-    }
-  },
-  "billOfLading": {
-    "number": null,
-    "date": null
-  },
-  "lcNumber": null,
-  "shippingMarks": [
-    {
-      "fullInformation": null,
-      "bags": null,
-      "grossWeight": null,
-      "netWeight": null
-    }
-  ],
-  "plantProtectionOrganizations": {
-    "from": null,
-    "to": null
-  },
-  "descriptionOfGoods": [
-    {
-      "fullInformation": null,
-      "commodity": {
-        "name": null,
-        "origin": null
-      },
-      "bags": null,
-      "grossWeight": null,
-      "netWeight": null
-    }
-  ],
-  "pointOfEntry": null,
-  "vesselDetails": {
-    "name": null,
-    "voyageNumber": null,
-    "flag": null
-  },
-  "containers": [
-    {
-      "containerNumber": null,
-      "sealNumbers": [],
-      "netWeight": null
-    }
-  ],
-  "lotNumbers": [],
-  "disinfectionDetails": {
-    "date": null,
-    "chemical": null,
-    "duration": null,
-    "temperature": null,
-    "treatment": null,
-    "concentration": null,
-    "additionalInformation": null
-  },
-  "additionalDeclaration": null
-}
-```
+
+<ParamField path="document.dateOfIssue" type="string">
+  Date when the document was issued
+</ParamField>
+
+<ParamField path="document.placeOfIssue" type="string">
+  Place where the document was issued
+</ParamField>
+
+<ParamField path="shipper.fullInformation" type="string">
+  Complete details of the shipper
+</ParamField>
+
+<ParamField path="shipper.name" type="string">
+  Name of the shipper
+</ParamField>
+
+<ParamField path="shipper.address" type="string">
+  Address of the shipper
+</ParamField>
+
+<ParamField path="shipper.contactDetails.phone" type="string">
+  Phone number of the shipper
+</ParamField>
+
+<ParamField path="shipper.contactDetails.email" type="string">
+  Email address of the shipper
+</ParamField>
+
+<ParamField path="consignee.fullInformation" type="string">
+  Complete details of the consignee
+</ParamField>
+
+<ParamField path="consignee.name" type="string">
+  Name of the consignee
+</ParamField>
+
+<ParamField path="consignee.address" type="string">
+  Address of the consignee
+</ParamField>
+
+<ParamField path="consignee.contactDetails.phone" type="string">
+  Phone number of the consignee
+</ParamField>
+
+<ParamField path="consignee.contactDetails.email" type="string">
+  Email address of the consignee
+</ParamField>
+
+<ParamField path="billOfLading.number" type="string">
+  Bill of Lading number
+</ParamField>
+
+<ParamField path="billOfLading.date" type="string">
+  Bill of Lading date
+</ParamField>
+
+<ParamField path="lcNumber" type="string">
+  Letter of Credit number
+</ParamField>
+
+<ParamField path="shippingMarks[].fullInformation" type="string">
+  Complete details of the shipping marks
+</ParamField>
+
+<ParamField path="shippingMarks[].bags" type="number">
+  Number of bags marked
+</ParamField>
+
+<ParamField path="shippingMarks[].grossWeight" type="number">
+  Gross weight of the marked goods
+</ParamField>
+
+<ParamField path="shippingMarks[].netWeight" type="number">
+  Net weight of the marked goods
+</ParamField>
+
+<ParamField path="plantProtectionOrganizations.from" type="string">
+  Plant protection organization from which the certificate is issued
+</ParamField>
+
+<ParamField path="plantProtectionOrganizations.to" type="string">
+  Plant protection organization to which the certificate is addressed
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].fullInformation" type="string">
+  Complete details of the goods
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].commodity.name" type="string">
+  Name of the commodity
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].commodity.origin" type="string">
+  Origin of the commodity
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].bags" type="number">
+  Number of bags
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].grossWeight" type="number">
+  Gross weight of the goods
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].netWeight" type="number">
+  Net weight of the goods
+</ParamField>
+
+<ParamField path="pointOfEntry" type="string">
+  Point of entry for the goods
+</ParamField>
+
+<ParamField path="vesselDetails.name" type="string">
+  Name of the vessel
+</ParamField>
+
+<ParamField path="vesselDetails.voyageNumber" type="string">
+  Voyage number
+</ParamField>
+
+<ParamField path="vesselDetails.flag" type="string">
+  Flag of the vessel
+</ParamField>
+
+<ParamField path="containers[].containerNumber" type="string">
+  Container number
+</ParamField>
+
+<ParamField path="containers[].sealNumbers" type="array">
+  Seal numbers of the container
+</ParamField>
+
+<ParamField path="containers[].netWeight" type="number">
+  Net weight of the container
+</ParamField>
+
+<ParamField path="lotNumbers" type="array">
+  Lot numbers
+</ParamField>
+
+<ParamField path="disinfectionDetails.date" type="string">
+  Date of disinfection
+</ParamField>
+
+<ParamField path="disinfectionDetails.chemical" type="string">
+  Chemical used for disinfection
+</ParamField>
+
+<ParamField path="disinfectionDetails.duration" type="string">
+  Duration of disinfection
+</ParamField>
+
+<ParamField path="disinfectionDetails.temperature" type="string">
+  Temperature during disinfection
+</ParamField>
+
+<ParamField path="disinfectionDetails.treatment" type="string">
+  Treatment details
+</ParamField>
+
+<ParamField path="disinfectionDetails.concentration" type="string">
+  Concentration of the chemical
+</ParamField>
+
+<ParamField path="disinfectionDetails.additionalInformation" type="string">
+  Additional information on disinfection
+</ParamField>
+
+<ParamField path="additionalDeclaration" type="string">
+  Any additional declarations or notes
+</ParamField>

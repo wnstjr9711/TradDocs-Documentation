@@ -1,73 +1,177 @@
 ---
-title: 'Letter of Credit'
+title: "Letter of Credit"
 ---
 
 ## Schema
-```json
-{
-  "40A": null,
-  "20": null,
-  "40E": null,
-  "31C": null,
-  "50": {
-    "fullInformation": "",
-    "name": null,
-    "address": null
-  },
-  "59": {
-    "fullInformation": "",
-    "name": null,
-    "address": null
-  },
-  "32B": null,
-  "39A": null,
-  "41A": null,
-  "41D": null,
-  "42C": null,
-  "42A": null,
-  "43P": null,
-  "43T": null,
-  "44E": null,
-  "44F": null,
-  "44B": null,
-  "44C": null,
-  "44D": null,
-  "45A": [
-    {
-      "commodity": {
-        "name": null,
-        "origin": null,
-        "cropYear": null,
-        "hsCode": null
-      },
-      "quantity": {
-        "value": null,
-        "unit": null,
-        "tolerance": {
-          "plus": null,
-          "minus": null,
-          "unit": null
-        }
-      },
-      "quality": {},
-      "price": {
-        "fullInformation": null,
-        "value": null,
-        "unit": null
-      },
-      "incoterm": null
-    }
-  ],
-  "71D": null,
-  "49": null,
-  "46A": [
-    {
-      "fullInformation": null,
-      "originals": 0,
-      "copies": 0
-    }
-  ],
-  "47A": []
-}
 
-```
+<ParamField path="40A" type="string">
+  Field 40A description
+</ParamField>
+
+<ParamField path="20" type="string">
+  Field 20 description
+</ParamField>
+
+<ParamField path="40E" type="string">
+  Field 40E description
+</ParamField>
+
+<ParamField path="31C" type="string">
+  Field 31C description
+</ParamField>
+
+<ParamField path="50.fullInformation" type="string">
+  Complete details of the applicant
+</ParamField>
+
+<ParamField path="50.name" type="string">
+  Name of the applicant
+</ParamField>
+
+<ParamField path="50.address" type="string">
+  Address of the applicant
+</ParamField>
+
+<ParamField path="59.fullInformation" type="string">
+  Complete details of the beneficiary
+</ParamField>
+
+<ParamField path="59.name" type="string">
+  Name of the beneficiary
+</ParamField>
+
+<ParamField path="59.address" type="string">
+  Address of the beneficiary
+</ParamField>
+
+<ParamField path="32B" type="string">
+  Field 32B description
+</ParamField>
+
+<ParamField path="39A" type="string">
+  Field 39A description
+</ParamField>
+
+<ParamField path="41A" type="string">
+  Field 41A description
+</ParamField>
+
+<ParamField path="41D" type="string">
+  Field 41D description
+</ParamField>
+
+<ParamField path="42C" type="string">
+  Field 42C description
+</ParamField>
+
+<ParamField path="42A" type="string">
+  Field 42A description
+</ParamField>
+
+<ParamField path="43P" type="string">
+  Field 43P description
+</ParamField>
+
+<ParamField path="43T" type="string">
+  Field 43T description
+</ParamField>
+
+<ParamField path="44E" type="string">
+  Field 44E description
+</ParamField>
+
+<ParamField path="44F" type="string">
+  Field 44F description
+</ParamField>
+
+<ParamField path="44B" type="string">
+  Field 44B description
+</ParamField>
+
+<ParamField path="44C" type="string">
+  Field 44C description
+</ParamField>
+
+<ParamField path="44D" type="string">
+  Field 44D description
+</ParamField>
+
+<ParamField path="45A[].commodity.name" type="string">
+  Name of the commodity
+</ParamField>
+
+<ParamField path="45A[].commodity.origin" type="string">
+  Origin of the commodity
+</ParamField>
+
+<ParamField path="45A[].commodity.cropYear" type="string">
+  Crop year of the commodity
+</ParamField>
+
+<ParamField path="45A[].commodity.hsCode" type="string">
+  HS code of the commodity
+</ParamField>
+
+<ParamField path="45A[].quantity.value" type="number">
+  Quantity value
+</ParamField>
+
+<ParamField path="45A[].quantity.unit" type="string">
+  Quantity unit
+</ParamField>
+
+<ParamField path="45A[].quantity.tolerance.plus" type="number">
+  Tolerance plus
+</ParamField>
+
+<ParamField path="45A[].quantity.tolerance.minus" type="number">
+  Tolerance minus
+</ParamField>
+
+<ParamField path="45A[].quantity.tolerance.unit" type="string">
+  Tolerance unit
+</ParamField>
+
+<ParamField path="45A[].quality" type="object">
+  Quality details
+</ParamField>
+
+<ParamField path="45A[].price.fullInformation" type="string">
+  Complete price details
+</ParamField>
+
+<ParamField path="45A[].price.value" type="number">
+  Price value
+</ParamField>
+
+<ParamField path="45A[].price.unit" type="string">
+  Price unit
+</ParamField>
+
+<ParamField path="45A[].incoterm" type="string">
+  Incoterm details
+</ParamField>
+
+<ParamField path="71D" type="string">
+  Field 71D description
+</ParamField>
+
+<ParamField path="49" type="string">
+  Field 49 description
+</ParamField>
+
+<ParamField path="46A[].fullInformation" type="string">
+  Complete document details
+</ParamField>
+
+<ParamField path="46A[].originals" type="number">
+  Number of originals
+</ParamField>
+
+<ParamField path="46A[].copies" type="number">
+  Number of copies
+</ParamField>
+
+<ParamField path="47A" type="array">
+  Additional details (if any)
+</ParamField>

@@ -1,97 +1,213 @@
 ---
-title: 'Packing List'
+title: "Packing List"
 ---
 
 ## Schema
-```json
-{
-  "document": {
-    "dateOfIssue": null,
-    "placeOfIssue": null
-  },
-  "shipper": {
-    "fullInformation": null,
-    "name": null,
-    "address": null,
-    "contactDetails": {
-      "phone": null,
-      "email": null
-    }
-  },
-  "consignee": {
-    "fullInformation": null,
-    "name": null,
-    "address": null,
-    "contactDetails": {
-      "phone": null,
-      "email": null
-    }
-  },
-  "notifyParties": [
-    {
-      "fullInformation": null,
-      "name": null,
-      "address": null,
-      "contactDetails": {
-        "phone": null,
-        "email": null
-      }
-    }
-  ],
-  "billOfLading": {
-    "number": null,
-    "date": null
-  },
-  "lcNumber": null,
-  "documentNumber": null,
-  "buyerReference": null,
-  "sellerReference": null,
-  "containers": [
-    {
-      "containerNumber": null,
-      "sealNumbers": [],
-      "netWeight": null
-    }
-  ],
-  "lotNumbers": [],
-  "vesselDetails": {
-    "vesselLiner": null,
-    "vesselName": null,
-    "voyageNumber": null,
-    "flag": null
-  },
-  "packingPlace": {
-    "name": null,
-    "address": null
-  },
-  "packingDate": null,
-  "placeOfReceipt": null,
-  "portOfLoading": null,
-  "portOfDischarge": null,
-  "placeOfDelivery": null,
-  "finalDestination": null,
-  "shippingMarks": [
-    {
-      "fullInformation": null,
-      "bags": null,
-      "grossWeight": null,
-      "netWeight": null
-    }
-  ],
-  "descriptionOfGoods": [
-    {
-      "fullInformation": null,
-      "commodity": {
-        "name": null,
-        "origin": null,
-        "cropYear": null,
-        "hsCode": null
-      },
-      "bags": null,
-      "grossWeight": null,
-      "netWeight": null,
-      "packing": null
-    }
-  ]
-}
-```
+
+<ParamField path="document.dateOfIssue" type="string">
+  Date of issue of the document
+</ParamField>
+
+<ParamField path="document.placeOfIssue" type="string">
+  Place of issue of the document
+</ParamField>
+
+<ParamField path="shipper.fullInformation" type="string">
+  Complete details of the shipper
+</ParamField>
+
+<ParamField path="shipper.name" type="string">
+  Name of the shipper
+</ParamField>
+
+<ParamField path="shipper.address" type="string">
+  Address of the shipper
+</ParamField>
+
+<ParamField path="shipper.contactDetails.phone" type="string">
+  Phone number of the shipper
+</ParamField>
+
+<ParamField path="shipper.contactDetails.email" type="string">
+  Email address of the shipper
+</ParamField>
+
+<ParamField path="consignee.fullInformation" type="string">
+  Complete details of the consignee
+</ParamField>
+
+<ParamField path="consignee.name" type="string">
+  Name of the consignee
+</ParamField>
+
+<ParamField path="consignee.address" type="string">
+  Address of the consignee
+</ParamField>
+
+<ParamField path="consignee.contactDetails.phone" type="string">
+  Phone number of the consignee
+</ParamField>
+
+<ParamField path="consignee.contactDetails.email" type="string">
+  Email address of the consignee
+</ParamField>
+
+<ParamField path="notifyParties[].fullInformation" type="string">
+  Complete details of each notified party
+</ParamField>
+
+<ParamField path="notifyParties[].name" type="string">
+  Name of each notified party
+</ParamField>
+
+<ParamField path="notifyParties[].address" type="string">
+  Address of each notified party
+</ParamField>
+
+<ParamField path="notifyParties[].contactDetails.phone" type="string">
+  Phone number of each notified party
+</ParamField>
+
+<ParamField path="notifyParties[].contactDetails.email" type="string">
+  Email address of each notified party
+</ParamField>
+
+<ParamField path="billOfLading.number" type="string">
+  Bill of Lading number
+</ParamField>
+
+<ParamField path="billOfLading.date" type="string">
+  Bill of Lading date
+</ParamField>
+
+<ParamField path="lcNumber" type="string">
+  Letter of Credit number
+</ParamField>
+
+<ParamField path="documentNumber" type="string">
+  Packing list document number
+</ParamField>
+
+<ParamField path="buyerReference" type="string">
+  Buyer reference number
+</ParamField>
+
+<ParamField path="sellerReference" type="string">
+  Seller reference number
+</ParamField>
+
+<ParamField path="containers[].containerNumber" type="string">
+  Container number
+</ParamField>
+
+<ParamField path="containers[].sealNumbers" type="array">
+  Seal numbers of the container
+</ParamField>
+
+<ParamField path="containers[].netWeight" type="number">
+  Net weight of the container
+</ParamField>
+
+<ParamField path="lotNumbers" type="array">
+  Lot numbers
+</ParamField>
+
+<ParamField path="vesselDetails.vesselLiner" type="string">
+  Vessel liner
+</ParamField>
+
+<ParamField path="vesselDetails.vesselName" type="string">
+  Name of the vessel
+</ParamField>
+
+<ParamField path="vesselDetails.voyageNumber" type="string">
+  Voyage number
+</ParamField>
+
+<ParamField path="vesselDetails.flag" type="string">
+  Flag of the vessel
+</ParamField>
+
+<ParamField path="packingPlace.name" type="string">
+  Name of the packing place
+</ParamField>
+
+<ParamField path="packingPlace.address" type="string">
+  Address of the packing place
+</ParamField>
+
+<ParamField path="packingDate" type="string">
+  Packing date
+</ParamField>
+
+<ParamField path="placeOfReceipt" type="string">
+  Place of receipt
+</ParamField>
+
+<ParamField path="portOfLoading" type="string">
+  Port of loading
+</ParamField>
+
+<ParamField path="portOfDischarge" type="string">
+  Port of discharge
+</ParamField>
+
+<ParamField path="placeOfDelivery" type="string">
+  Place of delivery
+</ParamField>
+
+<ParamField path="finalDestination" type="string">
+  Final destination
+</ParamField>
+
+<ParamField path="shippingMarks[].fullInformation" type="string">
+  Complete details of the shipping marks
+</ParamField>
+
+<ParamField path="shippingMarks[].bags" type="number">
+  Number of bags marked
+</ParamField>
+
+<ParamField path="shippingMarks[].grossWeight" type="number">
+  Gross weight of the marked goods
+</ParamField>
+
+<ParamField path="shippingMarks[].netWeight" type="number">
+  Net weight of the marked goods
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].fullInformation" type="string">
+  Complete details of the goods
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].commodity.name" type="string">
+  Name of the commodity
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].commodity.origin" type="string">
+  Origin of the commodity
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].commodity.cropYear" type="string">
+  Crop year of the commodity
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].commodity.hsCode" type="string">
+  HS code of the commodity
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].bags" type="number">
+  Number of bags
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].grossWeight" type="number">
+  Gross weight of the goods
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].netWeight" type="number">
+  Net weight of the goods
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].packing" type="string">
+  Packing details
+</ParamField>

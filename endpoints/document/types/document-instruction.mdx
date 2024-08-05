@@ -1,74 +1,141 @@
 ---
-title: 'Document Instruction'
+title: "Document Instruction"
 ---
 
 ## Schema
-```json
-{
-  "shipper": {
-    "fullInformation": null,
-    "name": null,
-    "address": null,
-    "contactDetails": {
-      "phone": null,
-      "email": null
-    }
-  },
-  "consignee": {
-    "fullInformation": null,
-    "name": null,
-    "address": null,
-    "contactDetails": {
-      "phone": null,
-      "email": null
-    }
-  },
-  "notifyParties": [
-    {
-      "fullInformation": null,
-      "name": null,
-      "address": null,
-      "contactDetails": {
-        "phone": null,
-        "email": null
-      }
-    }
-  ],
-  "vesselDetails": {
-    "vesselName": null,
-    "flag": null
-  },
-  "portOfLoading": null,
-  "portOfDischarge": null,
-  "descriptionOfGoods": [
-    {
-      "commodity": {
-        "name": null,
-        "origin": null,
-        "cropYear": null,
-        "hsCode": null
-      },
-      "quantity": {
-        "value": null,
-        "unit": null,
-        "tolerance": {
-          "plus": null,
-          "minus": null,
-          "unit": null
-        }
-      },
-      "quality": {},
-      "incoterm": null
-    }
-  ],
-  "requiredDocuments": [
-    {
-      "fullInformation": null,
-      "originals": 0,
-      "copies": 0
-    }
-  ],
-  "additionalRequirements": [
-  ]
-}
-```
+
+<ParamField path="shipper.fullInformation" type="string">
+  Complete details of the shipper
+</ParamField>
+
+<ParamField path="shipper.name" type="string">
+  Name of the shipper
+</ParamField>
+
+<ParamField path="shipper.address" type="string">
+  Address of the shipper
+</ParamField>
+
+<ParamField path="shipper.contactDetails.phone" type="string">
+  Phone number of the shipper
+</ParamField>
+
+<ParamField path="shipper.contactDetails.email" type="string">
+  Email address of the shipper
+</ParamField>
+
+<ParamField path="consignee.fullInformation" type="string">
+  Complete details of the consignee
+</ParamField>
+
+<ParamField path="consignee.name" type="string">
+  Name of the consignee
+</ParamField>
+
+<ParamField path="consignee.address" type="string">
+  Address of the consignee
+</ParamField>
+
+<ParamField path="consignee.contactDetails.phone" type="string">
+  Phone number of the consignee
+</ParamField>
+
+<ParamField path="consignee.contactDetails.email" type="string">
+  Email address of the consignee
+</ParamField>
+
+<ParamField path="notifyParties[].fullInformation" type="string">
+  Complete details of the notify party
+</ParamField>
+
+<ParamField path="notifyParties[].name" type="string">
+  Name of the notify party
+</ParamField>
+
+<ParamField path="notifyParties[].address" type="string">
+  Address of the notify party
+</ParamField>
+
+<ParamField path="notifyParties[].contactDetails.phone" type="string">
+  Phone number of the notify party
+</ParamField>
+
+<ParamField path="notifyParties[].contactDetails.email" type="string">
+  Email address of the notify party
+</ParamField>
+
+<ParamField path="vesselDetails.vesselName" type="string">
+  Name of the vessel
+</ParamField>
+
+<ParamField path="vesselDetails.flag" type="string">
+  Flag of the vessel
+</ParamField>
+
+<ParamField path="portOfLoading" type="string">
+  Port of loading
+</ParamField>
+
+<ParamField path="portOfDischarge" type="string">
+  Port of discharge
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].commodity.name" type="string">
+  Name of the commodity
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].commodity.origin" type="string">
+  Origin of the commodity
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].commodity.cropYear" type="string">
+  Crop year of the commodity
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].commodity.hsCode" type="string">
+  HS code of the commodity
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].quantity.value" type="number">
+  Quantity value
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].quantity.unit" type="string">
+  Quantity unit
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].quantity.tolerance.plus" type="number">
+  Tolerance plus
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].quantity.tolerance.minus" type="number">
+  Tolerance minus
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].quantity.tolerance.unit" type="string">
+  Tolerance unit
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].quality" type="object">
+  Quality details
+</ParamField>
+
+<ParamField path="descriptionOfGoods[].incoterm" type="string">
+  Incoterm details
+</ParamField>
+
+<ParamField path="requiredDocuments[].fullInformation" type="string">
+  Complete details of the required documents
+</ParamField>
+
+<ParamField path="requiredDocuments[].originals" type="number">
+  Number of originals
+</ParamField>
+
+<ParamField path="requiredDocuments[].copies" type="number">
+  Number of copies
+</ParamField>
+
+<ParamField path="additionalRequirements" type="array">
+  Additional requirements
+</ParamField>
