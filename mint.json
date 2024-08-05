@@ -1,18 +1,18 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "TradDocs",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/dark.png",
+    "light": "/logo/light.png"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#C80212",
+    "light": "#F87171",
+    "dark": "#C80212",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#C80212",
+      "to": "#F87171"
     }
   },
   "topbarCtaButton": {
@@ -22,6 +22,11 @@
   "tabs": [
   ],
   "anchors": [
+    {
+        "name": "Community",
+        "icon": "discord",
+        "url": "https://discord.gg/xgEXkh7Rxk"
+    }
   ],
   "navigation": [
     {
@@ -35,27 +40,28 @@
     {
       "group": "Endpoints",
       "pages": [
-        "endpoints/document/endpoint/analyze",
-        {
-          "group": "Document types",
-          "pages": [
-            "endpoints/document/types/bill-of-lading",
-            "endpoints/document/types/letter-of-credit",
-            "endpoints/document/types/document-instruction",
-            "endpoints/document/types/contract",
-            "endpoints/document/types/commercial-invoice",
-            "endpoints/document/types/packing-list",
-            "endpoints/document/types/certificate-of-origin",
-            "endpoints/document/types/certificate-of-weight",
-            "endpoints/document/types/certificate-of-quality",
-            "endpoints/document/types/phytosanitary-certificate",
-            "endpoints/document/types/fumigation-certificate"
-          ]
-        }
+        "endpoints/document/endpoint/analyze"
+      ]
+    },   
+    {
+      "group": "Document Types",
+      "pages": [
+        "endpoints/document/types/bill-of-lading",
+        "endpoints/document/types/letter-of-credit",
+        "endpoints/document/types/document-instruction",
+        "endpoints/document/types/contract",
+        "endpoints/document/types/commercial-invoice",
+        "endpoints/document/types/packing-list",
+        "endpoints/document/types/certificate-of-origin",
+        "endpoints/document/types/certificate-of-weight",
+        "endpoints/document/types/certificate-of-quality",
+        "endpoints/document/types/phytosanitary-certificate",
+        "endpoints/document/types/fumigation-certificate"
       ]
     }
   ],
   "footerSocials": {
-    "linkedin": "https://www.linkedin.com/company/traddocs"
+    "linkedin": "https://www.linkedin.com/company/traddocs",
+    "discord" : "https://discord.gg/xgEXkh7Rxk"
   }
 }
