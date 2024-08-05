@@ -1,3 +1,156 @@
 ---
 title: 'Bill of Lading'
 ---
+
+## Schema
+<CodeGroup>
+```json Container
+{
+  "document": {
+    "dateOfIssue": null,
+    "placeOfIssue": null
+  },
+  "shipper": {
+    "fullInformation": null,
+    "name": null,
+    "address": null,
+    "contactDetails": {
+      "phone": null,
+      "email": null
+    }
+  },
+  "consignee": {
+    "fullInformation": null,
+    "name": null,
+    "address": null,
+    "contactDetails": {
+      "phone": null,
+      "email": null
+    }
+  },
+  "notifyParties": [
+    {
+      "fullInformation": null,
+      "name": null,
+      "address": null,
+      "contactDetails": {
+        "phone": null,
+        "email": null
+      }
+    }
+  ],
+  "vesselDetails": {
+    "vesselName": null,
+    "voyageNumber": null,
+    "flag": null
+  },
+  "contractNumber": null,
+  "lcNumber": null,
+  "billOfLading": {
+    "number": null
+  },
+  "bookingNumber": null,
+  "serviceContractNumber": null,
+  "dateOfShipment": null,
+  "placeOfReceipt": null,
+  "portOfLoading": null,
+  "portOfDischarge": null,
+  "placeOfDelivery": null,
+  "finalDestination": null,
+  "containers": [
+    {
+      "containerNumber": null,
+      "sealNumbers": [],
+      "netWeight": null
+    }
+  ],
+  "lotNumbers": [],
+  "shippingMarks": [
+    {
+      "fullInformation": null,
+      "bags": null,
+      "grossWeight": null,
+      "netWeight": null
+    }
+  ],
+  "descriptionOfGoods": [
+    {
+      "fullInformation": null,
+      "commodity": {
+        "name": null,
+        "origin": null,
+        "cropYear": null,
+        "hsCode": null
+      },
+      "bags": null,
+      "grossWeight": null,
+      "netWeight": null,
+      "packing": null
+    }
+  ]
+}
+```
+```json Bulk
+{
+  "document": {
+    "dateOfIssue": null,
+    "placeOfIssue": null
+  },
+  "shipper": {
+    "fullInformation": null,
+    "name": null,
+    "address": null,
+    "contactDetails": {
+      "phone": null,
+      "email": null
+    }
+  },
+  "consignee": {
+    "fullInformation": null,
+    "name": null,
+    "address": null,
+    "contactDetails": {
+      "phone": null,
+      "email": null
+    }
+  },
+  "notifyParties": [
+    {
+      "fullInformation": null,
+      "name": null,
+      "address": null,
+      "contactDetails": {
+        "phone": null,
+        "email": null
+      }
+    }
+  ],
+  "vesselDetails": {
+    "vesselName": null,
+    "flag": null
+  },
+  "contractNumber": null,
+  "lcNumber": null,
+  "billOfLading": {
+    "number": null
+  },
+  "dateOfShipment": null,
+  "portOfLoading": null,
+  "portOfDischarge": null,
+  "descriptionOfGoods": [
+    {
+      "fullInformation": null,
+      "commodity": {
+        "name": null,
+        "origin": null,
+        "cropYear": null,
+        "hsCode": null
+      },
+      "grossWeight": null,
+      "netWeight": null,
+      "packing": null
+    }
+  ]
+}
+```
+</CodeGroup>

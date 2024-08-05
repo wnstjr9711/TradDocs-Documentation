@@ -1,3 +1,88 @@
 ---
 title: 'Certificate of Weight'
 ---
+
+## Schema
+```json
+{
+  "document": {
+    "dateOfIssue": null,
+    "placeOfIssue": null
+  },
+  "shipper": {
+    "fullInformation": null,
+    "name": null,
+    "address": null,
+    "contactDetails": {
+      "phone": null,
+      "email": null
+    }
+  },
+  "consignee": {
+    "fullInformation": null,
+    "name": null,
+    "address": null,
+    "contactDetails": {
+      "phone": null,
+      "email": null
+    }
+  },
+  "notifyParties": [
+    {
+      "fullInformation": null,
+      "name": null,
+      "address": null,
+      "contactDetails": {
+        "phone": null,
+        "email": null
+      }
+    }
+  ],
+  "vesselDetails": {
+    "vesselName": null,
+    "voyageNumber": null,
+    "flag": null
+  },
+  "portOfLoading": null,
+  "placeOfDelivery": null,
+  "billOfLading": {
+    "number": null,
+    "date": null
+  },
+  "lcNumber": null,
+  "tareWeight": null,
+  "descriptionOfGoods": [
+    {
+      "fullInformation": null,
+      "commodity": {
+        "name": null,
+        "origin": null,
+        "cropYear": null,
+        "hsCode": null
+      },
+      "bags": null,
+      "grossWeight": null,
+      "netWeight": null,
+      "packing": null
+    }
+  ],
+  "buyersReferenceNumber": null,
+  "sellersReferenceNumber": null,
+  "shippingMarks": [
+    {
+      "fullInformation": null,
+      "bags": null,
+      "grossWeight": null,
+      "netWeight": null
+    }
+  ],
+  "containers": [
+    {
+      "containerNumber": null,
+      "sealNumbers": [],
+      "netWeight": null
+    }
+  ],
+  "lotNumbers": []
+}
+```

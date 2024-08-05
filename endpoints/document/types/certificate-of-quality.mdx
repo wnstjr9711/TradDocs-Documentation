@@ -1,3 +1,90 @@
 ---
 title: 'Certificate of Quality'
 ---
+
+- `Quality`
+- `Quality and Weight`
+
+## Schema
+```json
+{
+  "document": {
+    "dateOfIssue": null,
+    "placeOfIssue": null
+  },
+  "shipper": {
+    "fullInformation": null,
+    "name": null,
+    "address": null,
+    "contactDetails": {
+      "phone": null,
+      "email": null
+    }
+  },
+  "consignee": {
+    "fullInformation": null,
+    "name": null,
+    "address": null,
+    "contactDetails": {
+      "phone": null,
+      "email": null
+    }
+  },
+  "notifyParties": [
+    {
+      "fullInformation": null,
+      "name": null,
+      "address": null,
+      "contactDetails": {
+        "phone": null,
+        "email": null
+      }
+    }
+  ],
+  "vesselDetails": {
+    "vesselName": null,
+    "voyageNumber": null,
+    "flag": null
+  },
+  "billOfLading": {
+    "number": null,
+    "date": null
+  },
+  "lcNumber": null,
+  "descriptionOfGoods": [
+    {
+      "fullInformation": null,
+      "commodity": {
+        "name": null,
+        "origin": null,
+        "cropYear": null,
+        "hsCode": null
+      },
+      "bags": null,
+      "grossWeight": null,
+      "netWeight": null,
+      "packing": null
+    }
+  ],
+  "portOfLoading": null,
+  "placeOfDelivery": null,
+  "buyersReference": null,
+  "shippingMarks": [
+    {
+      "fullInformation": null,
+      "bags": null,
+      "grossWeight": null,
+      "netWeight": null
+    }
+  ],
+  "quality": {},
+  "containers": [
+    {
+      "containerNumber": null,
+      "sealNumbers": [],
+      "netWeight": null
+    }
+  ],
+  "lotNumbers": []
+}
+```

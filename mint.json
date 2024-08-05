@@ -48,7 +48,6 @@
             "endpoints/document/types/certificate-of-origin",
             "endpoints/document/types/certificate-of-weight",
             "endpoints/document/types/certificate-of-quality",
-            "endpoints/document/types/certificate-of-quality-weight",
             "endpoints/document/types/phytosanitary-certificate",
             "endpoints/document/types/fumigation-certificate"
           ]

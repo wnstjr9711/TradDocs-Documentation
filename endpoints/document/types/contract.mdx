@@ -1,3 +1,106 @@
 ---
 title: 'Contract'
 ---
+
+## Schema
+```json
+{
+  "contractNumber": null,
+  "buyer": {
+    "fullInformation": "",
+    "name": null,
+    "address": null
+  },
+  "seller": {
+    "fullInformation": "",
+    "name": null,
+    "address": null
+  },
+  "extensionOfShipment": {
+    "fullInformation": null
+  },
+  "dateOfContract": null,
+  "packing": null,
+  "loadingRate": {
+    "rate": null,
+    "unit": null
+  },
+  "dischargeRate": {
+    "rate": null,
+    "unit": null
+  },
+  "payment": {
+    "fullInformation": null,
+    "term": null,
+    "lcType": null,
+    "percentage": "100",
+    "timeFrame": null
+  },
+  "portOfLoading": {
+    "port": null,
+    "safePort": null,
+    "safeBerth": null,
+    "dateOfShipment": {
+      "from": null,
+      "until": null,
+      "transshipment": null,
+      "partialShipment": null
+    }
+  },
+  "destination": {
+    "country": null,
+    "portOfDischarge": {
+      "port": null,
+      "safePort": null,
+      "safeBerth": null
+    }
+  },
+  "freeDate": {
+    "days": null
+  },
+  "weightQualityCondition": {
+    "finalPort": null
+  },
+  "arbitration": {
+    "country": null,
+    "rule": null
+  },
+  "insuranceOption": null,
+  "surveyorCostOption": null,
+  "surveyorNominationOption": null,
+  "descriptionOfGoods": [
+    {
+      "commodity": {
+        "name": null,
+        "origin": null,
+        "cropYear": null,
+        "hsCode": null
+      },
+      "quantity": {
+        "value": null,
+        "unit": null,
+        "tolerance": {
+          "plus": null,
+          "minus": null,
+          "unit": null,
+          "option": null
+        }
+      },
+      "quality": {},
+      "price": {
+        "fullInformation": null,
+        "value": null,
+        "unit": null
+      },
+      "incoterm": null
+    }
+  ],
+  "requiredDocuments": [
+    {
+      "fullInformation": null,
+      "originals": 0,
+      "copies": 0
+    }
+  ]
+}
+```

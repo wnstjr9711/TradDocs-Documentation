@@ -1,3 +1,81 @@
 ---
 title: 'Commercial Invoice'
 ---
+
+## Schema
+```json
+{
+  "document": {
+    "dateOfIssue": null,
+    "placeOfIssue": null
+  },
+  "invoiceNumber": null,
+  "contractNumber": null,
+  "from": {
+    "fullInformation": null,
+    "name": null,
+    "address": null,
+    "contactDetails": {
+      "phone": null,
+      "email": null
+    }
+  },
+  "to": {
+    "fullInformation": null,
+    "name": null,
+    "address": null,
+    "contactDetails": {
+      "phone": null,
+      "email": null
+    }
+  },
+  "billOfLading": {
+    "number": null,
+    "date": null
+  },
+  "lcNumber": null,
+  "invoiceValue": null,
+  "incoterm": null,
+  "descriptionOfGoods": [
+    {
+      "fullInformation": null,
+      "commodity": {
+        "name": null,
+        "origin": null,
+        "cropYear": null,
+        "hsCode": null
+      },
+      "bags": null,
+      "grossWeight": null,
+      "netWeight": null,
+      "packing": null
+    }
+  ],
+  "dateOfShipment": null,
+  "lotNumbers": [],
+  "shippingMarks": [
+    {
+      "fullInformation": null,
+      "bags": null,
+      "grossWeight": null,
+      "netWeight": null
+    }
+  ],
+  "bankInformation": {
+    "bankName": null,
+    "accountNumber": null,
+    "branchCode": null,
+    "swiftCode": null
+  },
+  "dueDate": null,
+  "vesselDetails": {
+    "vesselName": null,
+    "voyageNumber": null,
+    "flag": null
+  },
+  "paymentMethod": null,
+  "shipmentFrom": null,
+  "shipmentTo": null,
+  "packing": null
+}
+```

@@ -1,3 +1,97 @@
 ---
 title: 'Packing List'
 ---
+
+## Schema
+```json
+{
+  "document": {
+    "dateOfIssue": null,
+    "placeOfIssue": null
+  },
+  "shipper": {
+    "fullInformation": null,
+    "name": null,
+    "address": null,
+    "contactDetails": {
+      "phone": null,
+      "email": null
+    }
+  },
+  "consignee": {
+    "fullInformation": null,
+    "name": null,
+    "address": null,
+    "contactDetails": {
+      "phone": null,
+      "email": null
+    }
+  },
+  "notifyParties": [
+    {
+      "fullInformation": null,
+      "name": null,
+      "address": null,
+      "contactDetails": {
+        "phone": null,
+        "email": null
+      }
+    }
+  ],
+  "billOfLading": {
+    "number": null,
+    "date": null
+  },
+  "lcNumber": null,
+  "documentNumber": null,
+  "buyerReference": null,
+  "sellerReference": null,
+  "containers": [
+    {
+      "containerNumber": null,
+      "sealNumbers": [],
+      "netWeight": null
+    }
+  ],
+  "lotNumbers": [],
+  "vesselDetails": {
+    "vesselLiner": null,
+    "vesselName": null,
+    "voyageNumber": null,
+    "flag": null
+  },
+  "packingPlace": {
+    "name": null,
+    "address": null
+  },
+  "packingDate": null,
+  "placeOfReceipt": null,
+  "portOfLoading": null,
+  "portOfDischarge": null,
+  "placeOfDelivery": null,
+  "finalDestination": null,
+  "shippingMarks": [
+    {
+      "fullInformation": null,
+      "bags": null,
+      "grossWeight": null,
+      "netWeight": null
+    }
+  ],
+  "descriptionOfGoods": [
+    {
+      "fullInformation": null,
+      "commodity": {
+        "name": null,
+        "origin": null,
+        "cropYear": null,
+        "hsCode": null
+      },
+      "bags": null,
+      "grossWeight": null,
+      "netWeight": null,
+      "packing": null
+    }
+  ]
+}
+```

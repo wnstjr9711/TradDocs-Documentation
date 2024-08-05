@@ -1,3 +1,84 @@
 ---
 title: 'Phytosanitary Certificate'
 ---
+
+## Schema
+```json
+{
+  "document": {
+    "dateOfIssue": null,
+    "placeOfIssue": null
+  },
+  "shipper": {
+    "fullInformation": null,
+    "name": null,
+    "address": null,
+    "contactDetails": {
+      "phone": null,
+      "email": null
+    }
+  },
+  "consignee": {
+    "fullInformation": null,
+    "name": null,
+    "address": null,
+    "contactDetails": {
+      "phone": null,
+      "email": null
+    }
+  },
+  "billOfLading": {
+    "number": null,
+    "date": null
+  },
+  "lcNumber": null,
+  "shippingMarks": [
+    {
+      "fullInformation": null,
+      "bags": null,
+      "grossWeight": null,
+      "netWeight": null
+    }
+  ],
+  "plantProtectionOrganizations": {
+    "from": null,
+    "to": null
+  },
+  "descriptionOfGoods": [
+    {
+      "fullInformation": null,
+      "commodity": {
+        "name": null,
+        "origin": null
+      },
+      "bags": null,
+      "grossWeight": null,
+      "netWeight": null
+    }
+  ],
+  "pointOfEntry": null,
+  "vesselDetails": {
+    "name": null,
+    "voyageNumber": null,
+    "flag": null
+  },
+  "containers": [
+    {
+      "containerNumber": null,
+      "sealNumbers": [],
+      "netWeight": null
+    }
+  ],
+  "lotNumbers": [],
+  "disinfectionDetails": {
+    "date": null,
+    "chemical": null,
+    "duration": null,
+    "temperature": null,
+    "treatment": null,
+    "concentration": null,
+    "additionalInformation": null
+  },
+  "additionalDeclaration": null
+}
+```

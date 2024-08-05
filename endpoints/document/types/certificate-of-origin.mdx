@@ -1,3 +1,205 @@
 ---
 title: 'Certificate of Origin'
 ---
+
+- `General`
+  - `Free Trade`
+  - `LDC` (Least Developed Countries)
+  - `GSP` (Generalized System of Preferences)
+- `ICO` (International Coffee Organization)
+
+## Schema
+<CodeGroup>
+```json General
+{
+  "document": {
+    "dateOfIssue": null,
+    "placeOfIssue": null
+  },
+  "shipper": {
+    "fullInformation": null,
+    "name": null,
+    "address": null,
+    "contactDetails": {
+      "phone": null,
+      "email": null
+    }
+  },
+  "consignee": {
+    "fullInformation": null,
+    "name": null,
+    "address": null,
+    "contactDetails": {
+      "phone": null,
+      "email": null
+    }
+  },
+  "notifyParties": [
+    {
+      "fullInformation": null,
+      "name": null,
+      "address": null,
+      "contactDetails": {
+        "phone": null,
+        "email": null
+      }
+    }
+  ],
+  "meansOfTransport": null,
+  "vesselDetails": {
+    "vesselName": null,
+    "voyageNumber": null,
+    "flag": null
+  },
+  "portOfLoading": null,
+  "portOfDischarging": null,
+  "containers": [
+    {
+      "containerNumber": null,
+      "sealNumbers": [],
+      "netWeight": null
+    }
+  ],
+  "lotNumbers": [],
+  "dateOfShipment": null,
+  "lcNumber": null,
+  "billOfLading": {
+    "number": null,
+    "date": null
+  },
+  "shippingMarks": [
+    {
+      "fullInformation": null,
+      "bags": null,
+      "grossWeight": null,
+      "netWeight": null
+    }
+  ],
+  "descriptionOfGoods": [
+    {
+      "fullInformation": null,
+      "commodity": {
+        "name": null,
+        "origin": null,
+        "cropYear": null,
+        "hsCode": null
+      },
+      "bags": null,
+      "netWeight": {
+        "weight": null,
+        "unit": null
+      },
+      "packing": null
+    }
+  ],
+  "invoice": {
+    "number": null,
+    "date": null
+  },
+  "goodsExportedTo": null
+}
+```
+```json ICO
+{
+  "document": {
+    "dateOfIssue": null,
+    "placeOfIssue": null
+  },
+  "shipper": {
+    "fullInformation": null,
+    "name": null,
+    "address": null,
+    "contactDetails": {
+      "phone": null,
+      "email": null
+    }
+  },
+  "consignee": {
+    "fullInformation": null,
+    "name": null,
+    "address": null,
+    "contactDetails": {
+      "phone": null,
+      "email": null
+    }
+  },
+  "containers": [
+    {
+      "containerNumber": null,
+      "sealNumbers": [],
+      "netWeight": null
+    }
+  ],
+  "lotNumbers": [],
+  "notifyParties": [
+    {
+      "fullInformation": null,
+      "name": null,
+      "address": null,
+      "contactDetails": {
+        "phone": null,
+        "email": null
+      }
+    }
+  ],
+  "billOfLading": {
+    "number": null,
+    "date": null
+  },
+  "lcNumber": null,
+  "countryOfDestination": null,
+  "destinationCountryCode": null,
+  "meansOfTransport": null,
+  "shippedIn": null,
+  "descriptionOfGoods": [
+    {
+      "fullInformation": null,
+      "commodity": {
+        "name": null,
+        "origin": null,
+        "cropYear": null,
+        "hsCode": null
+      },
+      "bags": null,
+      "netWeight": {
+        "weight": null,
+        "unit": null
+      },
+      "packing": null
+    }
+  ],
+  "internalReferenceNo": null,
+  "countryCode": null,
+  "placeOfLoading": null,
+  "portOfShipmentCode": null,
+  "serialNo": null,
+  "producingCountry": {
+    "name": null,
+    "code": null
+  },
+  "dateOfExport": null,
+  "vesselDetails": {
+    "vesselName": null,
+    "voyageNumber": null,
+    "flag": null
+  },
+  "methodOfProcessing": null,
+  "qualityStandardsForGreenCoffee": null,
+  "specialCharacteristics": null,
+  "valueOfShipmentFOB": null,
+  "additionalInformation": null,
+  "countriesAndIntermediatePorts": null,
+  "botanicalName": null,
+  "exportingForm": null,
+  "shippingMarks": [
+    {
+      "fullInformation": null,
+      "bags": null,
+      "grossWeight": null,
+      "netWeight": null
+    }
+  ],
+  "otherMarks": null
+}
+```
+</CodeGroup>

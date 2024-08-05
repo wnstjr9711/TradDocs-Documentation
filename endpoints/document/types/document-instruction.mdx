@@ -1,3 +1,74 @@
 ---
 title: 'Document Instruction'
 ---
+
+## Schema
+```json
+{
+  "shipper": {
+    "fullInformation": null,
+    "name": null,
+    "address": null,
+    "contactDetails": {
+      "phone": null,
+      "email": null
+    }
+  },
+  "consignee": {
+    "fullInformation": null,
+    "name": null,
+    "address": null,
+    "contactDetails": {
+      "phone": null,
+      "email": null
+    }
+  },
+  "notifyParties": [
+    {
+      "fullInformation": null,
+      "name": null,
+      "address": null,
+      "contactDetails": {
+        "phone": null,
+        "email": null
+      }
+    }
+  ],
+  "vesselDetails": {
+    "vesselName": null,
+    "flag": null
+  },
+  "portOfLoading": null,
+  "portOfDischarge": null,
+  "descriptionOfGoods": [
+    {
+      "commodity": {
+        "name": null,
+        "origin": null,
+        "cropYear": null,
+        "hsCode": null
+      },
+      "quantity": {
+        "value": null,
+        "unit": null,
+        "tolerance": {
+          "plus": null,
+          "minus": null,
+          "unit": null
+        }
+      },
+      "quality": {},
+      "incoterm": null
+    }
+  ],
+  "requiredDocuments": [
+    {
+      "fullInformation": null,
+      "originals": 0,
+      "copies": 0
+    }
+  ],
+  "additionalRequirements": [
+  ]
+}
+```
