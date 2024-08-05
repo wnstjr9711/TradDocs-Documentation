@@ -35,7 +35,24 @@
     {
       "group": "Endpoints",
       "pages": [
-        "endpoints/document/endpoint/analyze"
+        "endpoints/document/endpoint/analyze",
+        {
+          "group": "Document types",
+          "pages": [
+            "endpoints/document/types/bill-of-lading",
+            "endpoints/document/types/letter-of-credit",
+            "endpoints/document/types/document-instruction",
+            "endpoints/document/types/contract",
+            "endpoints/document/types/commercial-invoice",
+            "endpoints/document/types/packing-list",
+            "endpoints/document/types/certificate-of-origin",
+            "endpoints/document/types/certificate-of-weight",
+            "endpoints/document/types/certificate-of-quality",
+            "endpoints/document/types/certificate-of-quality-weight",
+            "endpoints/document/types/phytosanitary-certificate",
+            "endpoints/document/types/fumigation-certificate"
+          ]
+        }
       ]
     }
   ],
