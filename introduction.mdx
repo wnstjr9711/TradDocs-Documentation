@@ -1,13 +1,31 @@
 ---
-title: 'Getting started'
+title: "Welcome to TradDocs"
 ---
+
+TradDocs provides an API that allows trade professionals to seamlessly split, extract, parse, and compare shipping documents, including Bill of Lading, Certificate of Origin, Invoice, Packing List, and more.
+
+<Note>You can see which document types we support [here](../endpoints/document/types/bill-of-lading)</Note>
+<Info>Looking for real-time support? Join our [Discord](https://discord.gg/xgEXkh7Rxk)</Info>
 
 ## Accessing the API
 
-Generate API keys in [API key page](https://www.traddocs.com/api-keys).
+We offer two types of API keys:
 
+- **Production API Key**: Used for live, real-world applications with higher rate limits.
+- **Sandbox API Key**: Used for development and testing purposes with lower rate limits and a 4-week expiration period.
+
+To obtain either a Production or Sandbox API key, please contact us directly. We will assist you in setting up the appropriate access based on your needs.
+
+## Prerequisites
+
+To complete this quickstart, you need:
+
+- A TradDocs [account](https://www.traddocs.com)
+- An API key
 
 ## Authentication
+
+Every API call requires a valid API key. You can retrieve the API key from an environment variable named `TRADDOCS_API_KEY` or provide it directly when initializing the TradDocs client.
 
 All requests must include an `x-api-key` header with your API key.
 
@@ -16,3 +34,19 @@ curl https://api.traddocs.com/$TRADDOCS_ENDPOINT \
      -H "x-api-key: $TRADDOCS_API_KEY" \
      ...
 ```
+
+## Next Steps
+
+Now that you have made your first TradDocs API request, it's time to explore additional features and capabilities:
+
+<CardGroup cols={2}>
+  <Card title="Check Endpoints" icon="square-1" href="../endpoints/document/endpoint/analyze">
+    Discover all the endpoints available for your integration needs.
+  </Card>
+  <Card title="Review Rate Limits" icon="square-2" href="./ratelimit">
+    Learn about the rate limits to ensure optimal API usage.
+  </Card>
+  <Card title="Supported Document Types" icon="square-3" href="../endpoints/document/types/bill-of-lading">
+    See the types of documents that can be processed with TradDocs.
+  </Card>
+</CardGroup>
