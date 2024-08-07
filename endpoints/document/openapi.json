@@ -17,11 +17,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/DocumentAnalyze"
-                  }
-                ],
+                "$ref": "#/components/schemas/DocumentAnalyze",
                 "title": "Body"
               }
             }
