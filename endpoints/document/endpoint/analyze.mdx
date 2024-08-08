@@ -27,3 +27,26 @@ The `Analyze Document` endpoint processes and analyzes multiple documents to ext
 - [Phytosanitary Certificate](../types/phytosanitary-certificate)
 - [Fumigation Certificate](../types/fumigation-certificate)
 - More to come...
+
+<RequestExample>
+```bash cURL
+curl --request POST \
+  --url https://api.traddocs.com/v1/documents/analyze \
+  --header 'Content-Type: multipart/form-data' \
+  --header 'x-api-key: <api-key>' \
+  --form file=@your/path/sample.pdf \
+  --form url=https://url_to_your_document.pdf
+```
+```python Python
+import requests
+
+url = "https://api.traddocs.com/v1/documents/analyze"
+headers = {"x-api-key": "<api-key>"}
+files = {"file": open("your/path/sample.pdf", "rb")}
+// files = {"url": (None, "https://url_to_your_document.pdf")}
+
+response = requests.post(url, headers=headers, files=files)
+
+print(response.json())
+```
+</RequestExample>

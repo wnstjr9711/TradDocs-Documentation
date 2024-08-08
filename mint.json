@@ -15,6 +15,11 @@
       "to": "#F87171"
     }
   },
+  "api": {
+    "playground": {
+      "mode": "simple"
+    }
+  },
   "topbarCtaButton": {
     "name": "Dashboard",
     "url": "https://www.traddocs.com/"
@@ -23,9 +28,9 @@
   ],
   "anchors": [
     {
-        "name": "Community",
-        "icon": "discord",
-        "url": "https://discord.gg/xgEXkh7Rxk"
+      "name": "Community",
+      "icon": "discord",
+      "url": "https://discord.gg/xgEXkh7Rxk"
     }
   ],
   "navigation": [
@@ -42,7 +47,7 @@
       "pages": [
         "endpoints/document/endpoint/analyze"
       ]
-    },   
+    },
     {
       "group": "Document Types",
       "pages": [
@@ -62,6 +67,6 @@
   ],
   "footerSocials": {
     "linkedin": "https://www.linkedin.com/company/traddocs",
-    "discord" : "https://discord.gg/xgEXkh7Rxk"
+    "discord": "https://discord.gg/xgEXkh7Rxk"
   }
 }
